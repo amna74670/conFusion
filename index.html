@@ -30,8 +30,8 @@
             <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
-            <span class="fa fa-sign-in"></span> Login</a>
+            <a href="#" id="buttonLogin">
+              <span class="fa fa-sign-in"></span> Login</a>
           </span>
         </div>
       </div>
@@ -82,7 +82,6 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="" action="index.html" method="post">
               <div class="form-group row">
                 <label class="col-md-2 col-form-label" for="">Number of Guests</label>
                 <div class="col-md-10">
@@ -128,7 +127,6 @@
                   <button class="btn btn-primary" type="submit">Reserved</button>
                 </div>
               </div>
-            </form>
           </div>
         </div>
       </div>
@@ -145,7 +143,7 @@
                   <img src="img/logo.png" class="img-fluid" alt="">
                 </div>
                 <div class="col col-sm align-self-center">
-                  <button class="btn btn-warning btn-sm btn-block text-white" role="button" data-toggle="modal" data-target="#reservationModal" type="button" name="button">Reserve Table</button>
+                  <button class="btn btn-warning btn-sm btn-block text-white" role="button"  type="button" name="button" id="buttonReserve">Reserve Table</button>
                 </div>
             </div>
         </div>
@@ -350,6 +348,14 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');
                 }
+            });
+
+            $("#buttonLogin").click(function() {
+              $("#loginModal").modal('show');
+            });
+
+            $("#buttonReserve").click(function() {
+              $("#reservationModal").modal('show');
             });
         });
     </script>
